@@ -71,7 +71,7 @@
     <!-- Navigation Tabs -->
     <nav class="tab-nav" id="tabNav">
         <div class="container">
-            <button class="tab-btn active" data-tab="about">
+            <button class="tab-btn active" data-tab="about" onclick="showTab('about')">
                 <i class="fas fa-user"></i> About
             </button>
             <button class="tab-btn" data-tab="expertise">
@@ -102,6 +102,16 @@
             <!-- About Section -->
             <section id="about" class="tab-content active">
                 <h2 class="section-title">About Me</h2>
+                <div class="about-header">
+                    <div class="profile-photo">
+                        <img src="assets/profile-photo.jpg" alt="Nauman Ul Haq" id="profilePhoto">
+                        <div class="photo-placeholder" id="photoPlaceholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+                
+
                 
                 <div class="about-grid">
                     <div class="about-text">
@@ -1153,6 +1163,34 @@
                 });
             }
         });
+
+        // Profile Photo Handler
+        const profilePhoto = document.getElementById('profilePhoto');
+        const photoPlaceholder = document.getElementById('photoPlaceholder');
+        
+        if (profilePhoto) {
+            profilePhoto.addEventListener('load', function() {
+                if (this.complete && this.naturalHeight !== 0) {
+                    if (photoPlaceholder) photoPlaceholder.style.display = 'none';
+                    this.style.display = 'block';
+                }
+            });
+            
+            profilePhoto.addEventListener('error', function() {
+                // Photo failed to load, show placeholder
+                this.style.display = 'none';
+                if (photoPlaceholder) photoPlaceholder.style.display = 'flex';
+            });
+            
+            // Trigger check on page load
+            if (profilePhoto.complete) {
+                if (profilePhoto.naturalHeight !== 0) {
+                    if (photoPlaceholder) photoPlaceholder.style.display = 'none';
+                    profilePhoto.style.display = 'block';
+                }
+            }
+        }
+
     </script>
 </body>
 </html>
