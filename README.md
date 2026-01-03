@@ -1,6 +1,6 @@
 # Professional Portfolio - Nauman Ul Haq
 
-[![Live Website](https://img.shields.io/badge/Live-nulhaq.github.io-blue?style=for-the-badge)](https://nulhaq.github.io)
+[![Live Website](https://img.shields.io/badge/Live-nulhaq.github.io-blue?style=for-the-badge)]([https://nulhaq.github.io](https://naumanulhaq.github.io/nulhaq.github.io/))
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-green?style=for-the-badge)](https://pages.github.com/)
 
 > Geospatial Data Scientist | Remote Sensing & GIS Specialist | 12+ Years Experience
