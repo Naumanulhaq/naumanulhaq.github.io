@@ -31,39 +31,47 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <!-- Hero Section -->
+        <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Nauman Ul Haq</h1>
-            <p class="hero-subtitle">Geospatial Data Scientist | Remote Sensing & GIS Specialist</p>
-            <p class="hero-tagline">Agriculture & Climate Analytics | FAO | ADB | USAID</p>
-            <p class="hero-description">
-                Remote sensing and GIS specialist with over a decade of experience using geospatial intelligence 
-                to support agriculture, climate resilience, disaster response, and sustainable natural resource management. 
-                Specializing in developing geospatial methodologies, leading multi-stakeholder analyses, and delivering 
-                actionable spatial products that guide evidence-based decisions for governments and development partners.
-            </p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="showTab('about')">
-                    <i class="fas fa-user"></i> View Profile
-                </button>
-                <a href="assets/CV_Nauman_UlHaq.pdf" download class="btn btn-outline">
-                    <i class="fas fa-download"></i> Download CV
-                </a>
-                <button class="btn btn-outline" onclick="showTab('contact')">
-                    <i class="fas fa-envelope"></i> Contact Me
-                </button>
+        <div class="hero-container">
+            <div class="hero-photo-section">
+                <div class="hero-photo-wrapper">
+                    <img src="assets/profile-photo.jpg" alt="Nauman Ul Haq - Geospatial Data Scientist" class="hero-photo">
+                    <div class="photo-placeholder-hero">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
             </div>
-            <div class="hero-social">
-                <a href="https://www.linkedin.com/in/nulhaq" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="/cdn-cgi/l/email-protection#4826293d2529263d242029397070082f25292124662b2725" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://github.com/Naumanulhaq" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
+            
+            <div class="hero-content-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Nauman Ul Haq</h1>
+                    <p class="hero-subtitle">Geospatial Data Scientist | Remote Sensing & GIS Specialist</p>
+                    <p class="hero-tagline">Agriculture & Climate Analytics | FAO | ADB | USAID</p>
+                    <p class="hero-description">
+                        Remote sensing and GIS specialist with over a decade of experience using geospatial intelligence 
+                        to support agriculture, climate resilience, disaster response, and sustainable natural resource management.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showTab('about')">
+                            <i class="fas fa-user"></i> View Profile
+                        </button>
+                        <a href="assets/CV_Nauman_UlHaq.pdf" download class="btn btn-outline">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <button class="btn btn-outline" onclick="showTab('contact')">
+                            <i class="fas fa-envelope"></i> Contact Me
+                        </button>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/nulhaq" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Naumanulhaq" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -102,13 +110,7 @@
             <!-- About Section -->
             <section id="about" class="tab-content active">
                 <h2 class="section-title">About Me</h2>
-                <div class="about-header">
-                    <div class="profile-photo">
-                        <img src="assets/profile-photo.jpg" alt="Nauman Ul Haq" id="profilePhoto">
-                        <div class="photo-placeholder" id="photoPlaceholder">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
+                </div>
                 </div>
                 
 
@@ -1141,7 +1143,31 @@
             }
         }
 
-        // Dark mode toggle
+        
+        // Hero Photo Handler
+        const heroPhoto = document.querySelector('.hero-photo');
+        const heroPlaceholder = document.querySelector('.photo-placeholder-hero');
+        
+        if (heroPhoto) {
+            heroPhoto.addEventListener('load', function() {
+                if (this.complete && this.naturalHeight !== 0) {
+                    if (heroPlaceholder) heroPlaceholder.style.display = 'none';
+                    this.style.display = 'block';
+                }
+            });
+            
+            heroPhoto.addEventListener('error', function() {
+                this.style.display = 'none';
+                if (heroPlaceholder) heroPlaceholder.style.display = 'flex';
+            });
+            
+            if (heroPhoto.complete && heroPhoto.naturalHeight !== 0) {
+                if (heroPlaceholder) heroPlaceholder.style.display = 'none';
+                heroPhoto.style.display = 'block';
+            }
+        }
+
+// Dark mode toggle
         document.addEventListener('DOMContentLoaded', function() {
             const darkModeToggle = document.getElementById('darkModeToggle');
             const body = document.body;
