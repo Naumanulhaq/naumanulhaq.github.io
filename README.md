@@ -3,7 +3,7 @@
 [![Live Website](https://img.shields.io/badge/Live-nulhaq.github.io-blue?style=for-the-badge)](https://nulhaq.github.io)
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-green?style=for-the-badge)](https://pages.github.com/)
 
-> Geospatial Data Scientist | Remote Sensing & GIS Specialist | 10+ Years Experience
+> Geospatial Data Scientist | Remote Sensing & GIS Specialist | 12+ Years Experience
 
 ## 🌐 Overview
 
@@ -11,7 +11,7 @@ Professional portfolio website showcasing expertise in:
 - Remote Sensing & Earth Observation
 - GIS & Geospatial Analytics  
 - Machine Learning for Agriculture & Climate
-- International Development (FAO, ADB, USAID)
+- International Development (UNFAO, ADB, USAID)
 
 **Live Site**: [nulhaq.github.io](https://nulhaq.github.io)
 
