@@ -34,43 +34,43 @@
         <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-container">
-            <div class="hero-photo-section">
-                <div class="hero-photo-wrapper">
-                    <img src="assets/profile-photo.jpg" alt="Nauman Ul Haq - Geospatial Data Scientist" class="hero-photo">
-                    <div class="photo-placeholder-hero">
+            <!-- Photo Section - LEFT SIDE -->
+            <div class="hero-photo-column">
+                <div class="hero-photo-frame">
+                    <img src="assets/profile-photo.jpg" alt="Nauman Ul Haq" class="hero-photo" id="heroPhoto">
+                    <div class="hero-photo-placeholder" id="heroPlaceholder">
                         <i class="fas fa-user"></i>
                     </div>
                 </div>
             </div>
             
-            <div class="hero-content-section">
-                <div class="hero-content">
-                    <h1 class="hero-title">Nauman Ul Haq</h1>
-                    <p class="hero-subtitle">Geospatial Data Scientist | Remote Sensing & GIS Specialist</p>
-                    <p class="hero-tagline">Agriculture & Climate Analytics | FAO | ADB | USAID</p>
-                    <p class="hero-description">
-                        Remote sensing and GIS specialist with over a decade of experience using geospatial intelligence 
-                        to support agriculture, climate resilience, disaster response, and sustainable natural resource management.
-                    </p>
-                    <div class="hero-buttons">
-                        <button class="btn btn-primary" onclick="showTab('about')">
-                            <i class="fas fa-user"></i> View Profile
-                        </button>
-                        <a href="assets/CV_Nauman_UlHaq.pdf" download class="btn btn-outline">
-                            <i class="fas fa-download"></i> Download CV
-                        </a>
-                        <button class="btn btn-outline" onclick="showTab('contact')">
-                            <i class="fas fa-envelope"></i> Contact Me
-                        </button>
-                    </div>
-                    <div class="hero-social">
-                        <a href="https://www.linkedin.com/in/nulhaq" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/Naumanulhaq" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
+            <!-- Content Section - RIGHT SIDE -->
+            <div class="hero-content-column">
+                <h1 class="hero-title">Nauman Ul Haq</h1>
+                <p class="hero-subtitle">Geospatial Data Scientist | Remote Sensing & GIS Specialist</p>
+                <p class="hero-tagline">Agriculture & Climate Analytics | FAO | ADB | USAID</p>
+                <p class="hero-description">
+                    Remote sensing and GIS specialist with over a decade of experience using geospatial intelligence 
+                    to support agriculture, climate resilience, disaster response, and sustainable natural resource management.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showTab('about')">
+                        <i class="fas fa-user"></i> View Profile
+                    </button>
+                    <a href="assets/CV_Nauman_UlHaq.pdf" download class="btn btn-outline">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <button class="btn btn-outline" onclick="showTab('contact')">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </button>
+                </div>
+                <div class="hero-social">
+                    <a href="https://www.linkedin.com/in/nulhaq" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Naumanulhaq" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -110,7 +110,13 @@
             <!-- About Section -->
             <section id="about" class="tab-content active">
                 <h2 class="section-title">About Me</h2>
-                </div>
+                <div class="about-header">
+                    <div class="profile-photo">
+                        <img src="assets/profile-photo.jpg" alt="Nauman Ul Haq" id="profilePhoto">
+                        <div class="photo-placeholder" id="photoPlaceholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
                 </div>
                 
 
@@ -155,7 +161,7 @@
                             </div>
                             <div class="stat-card">
                                 <i class="fas fa-project-diagram"></i>
-                                <h3>50+</h3>
+                                <h3>14+</h3>
                                 <p>Projects Delivered</p>
                             </div>
                             <div class="stat-card">
@@ -1144,9 +1150,9 @@
         }
 
         
-        // Hero Photo Handler
-        const heroPhoto = document.querySelector('.hero-photo');
-        const heroPlaceholder = document.querySelector('.photo-placeholder-hero');
+        // Hero Photo Loading
+        const heroPhoto = document.getElementById('heroPhoto');
+        const heroPlaceholder = document.getElementById('heroPlaceholder');
         
         if (heroPhoto) {
             heroPhoto.addEventListener('load', function() {
